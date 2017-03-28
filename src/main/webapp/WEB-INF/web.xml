@@ -8,15 +8,26 @@
 		<servlet-class>car.tp4.servlet.HelloServlet</servlet-class>
 	</servlet>
 
-	<servlet-mapping>
-		<servlet-name>hello</servlet-name>
-		<url-pattern>/hello</url-pattern>
-	</servlet-mapping>
+	<servlet>
+		<servlet-name>create-book</servlet-name>
+		<servlet-class>car.tp4.servlet.CreateBookServlet</servlet-class>
+	</servlet>
 
 	<servlet>
 		<servlet-name>database</servlet-name>
 		<servlet-class>car.tp4.servlet.DatabaseServlet</servlet-class>
 	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>hello</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>create-book</servlet-name>
+		<url-pattern>/create</url-pattern>
+	</servlet-mapping>
+
 	<servlet-mapping>
 		<servlet-name>database</servlet-name>
 		<url-pattern>/database</url-pattern>
