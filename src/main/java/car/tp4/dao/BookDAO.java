@@ -13,7 +13,7 @@ import car.tp4.entity.Book;
 
 public interface BookDAO {
 
-	@SqlUpdate("create table books (id integer primary key autoincrement, title varchar(100), author varchar(100), year integer, qty integer)")
+	@SqlUpdate("create table if not exists books (id integer primary key autoincrement, title varchar(100), author varchar(100), year integer, qty integer)")
 	void createTable();
 	
 	@SqlQuery("select id, title, author, year, qty from books where id = :id")

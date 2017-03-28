@@ -10,5 +10,7 @@ public class DBIInstance {
 		ds.setUrl("jdbc:sqlite:"+System.getProperty("java.io.tmpdir")+System.getProperty("file.separator")+"books.db");
 		instance = new DBI(ds);
 		System.out.println("Database created : " + System.getProperty("java.io.tmpdir")+System.getProperty("file.separator")+"books.db");
+		BookDAO bookDAO = instance.open(BookDAO.class);
+		bookDAO.createTable();
     }
 }

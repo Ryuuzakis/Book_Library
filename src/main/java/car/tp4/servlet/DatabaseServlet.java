@@ -15,7 +15,7 @@ import car.tp4.entity.Book;
 public class DatabaseServlet extends HttpServlet {
 	private static final long serialVersionUID = -6459051150998808363L;
 
-	BookDAO dao = DBIInstance.instance.open(BookDAO.class);
+	private BookDAO dao = DBIInstance.instance.open(BookDAO.class);
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -23,10 +23,6 @@ public class DatabaseServlet extends HttpServlet {
 
 		dao.dropTable();
 		dao.createTable();
-		dao.insert("test", "titreTest", 2014, 0);
-		List<Book> bs = dao.selectAll();
-		for (Book b : bs) {
-			response.getOutputStream().println(b.toString());
-		}
+		response.getOutputStream().println("Database created");
 	}
 }
