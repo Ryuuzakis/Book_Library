@@ -114,11 +114,7 @@
           <artifactId>openjpa-maven-plugin</artifactId>
           <version>${version.openjpa}</version>
         </plugin>
-      </plugins>
-    </pluginManagement>
-
-    <plugins>
-      <plugin>
+              <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
@@ -180,7 +176,8 @@
           </dependency>
         </dependencies>
       </plugin>
-    </plugins>
+      </plugins>
+    </pluginManagement>
   </build>
 
   <repositories>
