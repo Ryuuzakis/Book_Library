@@ -8,10 +8,20 @@
     <servlet-name>hello</servlet-name>
     <servlet-class>car.tp4.servlet.HelloServlet</servlet-class>
   </servlet>
+  
+  <servlet>
+    <servlet-name>create-book</servlet-name>
+    <servlet-class>car.tp4.servlet.CreateBookServlet</servlet-class>
+  </servlet>
 
   <servlet-mapping>
     <servlet-name>hello</servlet-name>
     <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>create-book</servlet-name>
+  	<url-pattern>/create</url-pattern>
   </servlet-mapping>
 
 </web-app>

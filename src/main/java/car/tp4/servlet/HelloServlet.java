@@ -12,6 +12,8 @@ public class HelloServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
+	  
+	  System.out.println("hello servlet get");
 
     RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/jsp/hello.jsp");
     dispatcher.forward(request, response);
@@ -20,6 +22,8 @@ public class HelloServlet extends HttpServlet {
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
+	  
+	System.out.println("hello servlet post");
 
     request.setCharacterEncoding("UTF-8");
 
